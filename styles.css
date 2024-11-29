@@ -1,0 +1,111 @@
+h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0.5rem;
+    font-style: italic;
+}
+
+h2 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 0.375rem;
+    font-style: italic;
+}
+
+nav {
+    text-align: center;
+}
+
+.hanging-indent {
+    padding-left: 1.5in;
+    text-indent: -1.5in;
+}
+
+a:hover {
+    color: red;
+}
+
+a:visited {
+    color: purple;
+}
+
+body {
+    font-family: "Roboto Light", sans-serif;
+    margin: 2rem;
+    color: #333;
+    background-color: rgba(144, 238, 144, 0.18);
+}
+
+header {
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main {
+    padding: 2rem;
+}
+
+p {
+    line-height: 1.15;
+}
+
+img {
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    max-width: 100%;
+}
+
+
+button {
+    border-radius: 16px;
+    background-color: #00dd00;
+    padding: 16px 24px;
+    display: inline;
+    font-size: 16px;
+}
+
+button.current {
+    background-color: #4d004d;
+    color: white;
+    opacity: 80%;
+    border: 3px dashed #00dd00
+}
+
+table {
+    font-family: "Roboto Light", sans-serif;
+    border: 2px solid #eee;
+    width: 100%;
+}
+
+
+tr:nth-child(even) {
+    background-color: #f2d9e2;
+}
+
+td, tr, th {
+    padding: 10px;
+    font-style: italic;
+}
+
+td.desc, tr.desc {
+    width: 45%;
+}
+
+th {
+    font-weight: bold;
+    font-style: italic;
+}
+
+td.picture, tr.picture {
+    width: 45%;
+    border-radius: 10px;
+}
+
+td.source, tr.source {
+    width: 10%;
+}

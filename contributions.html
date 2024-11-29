@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contributions to the Internet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="founder-images/cerf%20international%20science%20council.jpeg">
+</head>
+<body>
+
+<h1><a href="index.html">Vint Cerf: the Creator of TCP/IP</a></h1>
+<header>
+    <nav>
+        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='bio.html'">Biography</button>
+        <button onclick="location.href='impact.html'">Impact</button>
+        <button onclick="location.href='contributions.html'" class="current">Contributions to the Internet</button>
+        <button onclick="location.href='gallery.html'">Photo Gallery</button>
+        <button onclick="location.href='sources.html'">Sources</button>
+    </nav>
+</header>
+<h2>What is TCP/IP?</h2>
+<p>TCP stands for "Transmission Control Protocol/Internet Protocol." Protocols are the sets of standards we use to
+    correctly, safely, and quickly move information around the internet. TCP/IP ensures, unlike UDP, which is another
+    protocol, that all the data gets from point A to point B losslessly. You
+    might use UDP behind the scenes on a Zoom call-- your image might get grainy, or you could hear a few seconds of
+    choppy audio, but most of the audio and video still makes it through to the other end, even if not perfectly--where
+    speed takes the place of accuracy as teh primary concern. But when accuracy matters most, like
+    in making sure all the contents of an email get to their destination, you will TCP. TCP keeps track of which
+    packets have been sent and
+    which ones have been received and can resend those which encountered issues along the way. It doesn't matter if
+    packets come in out of order, because there will be processes at the destination that put the packets in the proper
+    order, </p>
+<p>According to a <a href="https://www.youtube.com/watch?v=AEaKrq3SpW8">Crash Course Computer Science video</a>, TCP
+    does this primarily with two functionalities: </p>
+<ul>
+    <li>checksums</li>
+    <li>ack messages</li>
+</ul>
+<p>Checksums-- also found in things like credit card numbers-- allow the data to validate itself. You probably can't
+    guess
+    a credit card number at random, so it would be quite hard to have illicit purchases on your account that way,
+    precisely
+    because the payment processor is looking for the sum of the digits of your card number, possibly mod something else,
+    to
+    yield a certain result. TCP uses checksums to make sure the data in the packet on the sending end hasn't changed by
+    the time it gets to the receiving end. There is some formula for calculating the checksum of the data in the TCP
+    packet, which is checked when the package is sent and recalculated when the package is received. If they match, the
+    data got through without issues. If the check sum is right, your packet is accepted. If the checksum is right,
+    you'll be allowed to check out from the online store. If not, something corrupted the package, and it can be
+    requested again because the
+    sequence in which packets are sent is known. </p>
+
+<p>Acknowledgements work by sending extra messages across the network-- slowing down the transfer of information-- to
+    let the sender
+    know the receiver got their packet. You can send packet 1, get an ack, send packet 2, get an ack, send packet 3...
+    get nothing... and then you know there was some kind of problem and packet 3 needs to be resent, That can either
+    happen before you send packet 4, or when you're done sending however many packets you have, because one of the
+    benefits of TCP is that it keeps track of the order of the reassembly of the packets. </p>
+<p>According to PCMag, these acknowledgement messages take 3 steps:
+<ol>
+    <li>synchronize</li>
+    <li>acknowledge the first packet</li>
+    <li>acknowledge the acknowledgement</li>
+</ol>
+<p>
+    This picture from Techopedia shows the TCP/IP handshake process:
+</p>
+<img src="founder-images/tcp%20ip%20techopedia.png"
+     alt="a diagram showing the 3 stage process of the TCP/IP handshake">
+<p>
+    With this 3-way handshake protocol, both ends of a connection speaking the language of TCP/IP know they can hear
+    each
+    other. One message is sent to "synchronize," then a "synchronize acknowledge" message is sent in the opposite
+    direction to acknowledge the first message, and finally a third message is sent in the original direction to
+    acknowledge the second, and the connection is made.
+</p>
+</body>
+</html>
